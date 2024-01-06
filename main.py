@@ -1,5 +1,6 @@
 import random
 
+# variables
 guessValue = random.randint(1, 10)
 print('Welcome, just a simple program to put my python basics in action!')
 
@@ -7,9 +8,11 @@ running = True
 
 rounds = 5
 
+# guess
 while running:
     guess_str = input(f'Guess any number from 1 to 10, you have {rounds} rounds left: ')
     guess = int(guess_str)
+    
     
     if guess == guessValue:
         print('Correct!')
