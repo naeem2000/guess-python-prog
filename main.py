@@ -3,11 +3,14 @@ import random
 print('Welcome, just a simple program to put my python basics in action!')
 
 # variables
-guessValue = random.randint(1, 10)
 
 running = True
 
 rounds = 5
+
+# function to generate a random number
+def randomizer():
+   return random.randint(1, 10)
 
 # main guess function
 def guesser():
@@ -15,7 +18,7 @@ def guesser():
     global rounds
     guess_str = input(f'Guess any number from 1 to 10, you have {rounds} rounds left: ')
     guess = int(guess_str)
-    if guess == guessValue:
+    if guess == randomizer():
         print('Correct!')
         rounds = rounds - 1
     else:
